@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class CahierDeTexteInteractif {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private LocalDate dateCreation;
 	private String description;
 	private String titre;

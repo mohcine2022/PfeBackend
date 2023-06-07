@@ -11,13 +11,11 @@ import java.util.List;
 public class Etudiant extends Personne {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private String classe;
 	@OneToMany
 	private List<Inscription> inscriptions;
 	@OneToMany
 	private List<Note> notes;
-	@OneToMany
-	private List<Presence> presences;
 
 }

@@ -11,10 +11,12 @@ import java.util.List;
 public class Inscription {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private String dateInscription;
 	@ManyToOne
 	private Etudiant etudiant;
 	@OneToMany
 	private List<Cours> cours;
+	@ManyToOne
+	private Formation formation;
 }

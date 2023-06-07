@@ -1,13 +1,17 @@
 package com.mohcine.pfe.controllers;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.mohcine.pfe.services.DashboardService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
+
 @RestController
-@RequestMapping("/api/dashboard")
-public class DashboardController {
-    @GetMapping
-    public String getDashboardData() {
-        // Logique pour récupérer les données du tableau de bord depuis la base de données ou une autre source
-        return "Données du tableau de bord";
+public class DashboardControllerImpl implements DashboardController{
+    @Autowired
+    DashboardService dashboardService;
+    @Override
+    public ResponseEntity<Map<String, Object>> getCount(){
+        return dashboardService.getCount();
     }
 }

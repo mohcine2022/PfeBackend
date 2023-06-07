@@ -9,7 +9,7 @@ import lombok.*;
 public class Profil {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 
 	private boolean suiviIntervenant;
 	private boolean voirCahierDeTexteInteractif;

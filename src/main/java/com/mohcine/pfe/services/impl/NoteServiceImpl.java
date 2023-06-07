@@ -1,8 +1,8 @@
-package com.mohcine.pfe.services.AppServiceImpl;
+package com.mohcine.pfe.services.impl;
 
 import com.mohcine.pfe.dao.NoteRepository;
 import com.mohcine.pfe.model.Note;
-import com.mohcine.pfe.services.AppService.NoteService;
+import com.mohcine.pfe.services.NoteService;
 import org.springframework.stereotype.Service;
 
 @Service

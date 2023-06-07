@@ -11,7 +11,7 @@ import java.util.List;
 public class Salle {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private int capacite;
 	private int numeroDeSalle;
 }

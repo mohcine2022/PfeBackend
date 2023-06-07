@@ -1,4 +1,4 @@
-package com.mohcine.pfe.services.AppService;
+package com.mohcine.pfe.services;
 
 import com.mohcine.pfe.model.Presence;
 import com.mohcine.pfe.model.Profil;

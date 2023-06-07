@@ -9,10 +9,12 @@ import lombok.*;
 public class Cours {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private String description;
 	private String nomDuProf;
 	private String titre;
 	@ManyToOne
 	private Enseignant enseignant;
+	@ManyToOne
+	private Formation formation;
 }

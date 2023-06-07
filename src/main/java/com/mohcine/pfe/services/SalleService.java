@@ -1,5 +1,4 @@
-package com.mohcine.pfe.services.AppService;
-
+package com.mohcine.pfe.services;
 import com.mohcine.pfe.model.Salle;
 
 public interface SalleService {

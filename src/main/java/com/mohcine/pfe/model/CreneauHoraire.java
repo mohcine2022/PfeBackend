@@ -9,7 +9,7 @@ import lombok.*;
 public class CreneauHoraire {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private Time heureDebut;
 	private Time heureFin;
 	private String jour;

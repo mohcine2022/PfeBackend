@@ -1,8 +1,8 @@
-package com.mohcine.pfe.services.AppServiceImpl;
+package com.mohcine.pfe.services.impl;
 
 import com.mohcine.pfe.dao.UserRepository;
 import com.mohcine.pfe.model.User;
-import com.mohcine.pfe.services.AppService.UserService;
+import com.mohcine.pfe.services.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,8 +19,4 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAllByFirstnameNotNull();
     }
 
-    @Override
-    public User creerUser(User user) {
-        return userRepository.save(user);
-    }
 }

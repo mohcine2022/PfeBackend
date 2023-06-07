@@ -1,8 +1,8 @@
-package com.mohcine.pfe.services.AppServiceImpl;
+package com.mohcine.pfe.services.impl;
 
 import com.mohcine.pfe.dao.EmploiDuTempsRepository;
 import com.mohcine.pfe.model.Emploidutemps;
-import com.mohcine.pfe.services.AppService.EmploiDuTempsService;
+import com.mohcine.pfe.services.EmploiDuTempsService;
 import org.springframework.stereotype.Service;
 
 @Service

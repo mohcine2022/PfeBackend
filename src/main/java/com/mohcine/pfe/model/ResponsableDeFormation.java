@@ -10,8 +10,8 @@ import java.util.List;
 public class ResponsableDeFormation extends Personne {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-
+    private Long id;
+    @OneToMany
     private List<Cours> cours;
     @OneToMany
     private List<Emargement> emargements;

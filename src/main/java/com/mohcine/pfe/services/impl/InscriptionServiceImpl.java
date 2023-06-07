@@ -1,8 +1,8 @@
-package com.mohcine.pfe.services.AppServiceImpl;
+package com.mohcine.pfe.services.impl;
 
 import com.mohcine.pfe.dao.InscriptionRepository;
 import com.mohcine.pfe.model.Inscription;
-import com.mohcine.pfe.services.AppService.InscriptionService;
+import com.mohcine.pfe.services.InscriptionService;
 import org.springframework.stereotype.Service;
 
 @Service

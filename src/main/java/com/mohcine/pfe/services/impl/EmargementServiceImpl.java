@@ -1,8 +1,8 @@
-package com.mohcine.pfe.services.AppServiceImpl;
+package com.mohcine.pfe.services.impl;
 
 import com.mohcine.pfe.dao.EmargementRepository;
 import com.mohcine.pfe.model.Emargement;
-import com.mohcine.pfe.services.AppService.EmargementService;
+import com.mohcine.pfe.services.EmargementService;
 import org.springframework.stereotype.Service;
 
 @Service

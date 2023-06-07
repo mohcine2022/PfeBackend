@@ -1,5 +1,4 @@
 package com.mohcine.pfe.config;
-
 import com.mohcine.pfe.dao.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

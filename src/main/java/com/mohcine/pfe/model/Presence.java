@@ -10,13 +10,8 @@ import java.util.List;
 public class Presence {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private String statut;
-	@ManyToOne
-	private Etudiant etudiant;
 	@OneToMany
 	private List<Emargement> emargements;
-	@ManyToOne
-	private Enseignant enseignant;
-
 }

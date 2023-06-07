@@ -8,7 +8,7 @@ import lombok.*;
 public class Personne {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	@Column(unique = true)
 	private String email;
 	private String identifiant;

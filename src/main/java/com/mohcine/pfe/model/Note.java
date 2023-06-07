@@ -9,9 +9,8 @@ import java.time.LocalDate;
 public class Note {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private LocalDate datePublication;
-
 	private Double note;
 	@ManyToOne
 	private Cours cours;
