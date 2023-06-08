@@ -1,7 +1,7 @@
 package com.mohcine.pfe.services.impl;
 
 import com.mohcine.pfe.dao.EmploiDuTempsRepository;
-import com.mohcine.pfe.model.Emploidutemps;
+import com.mohcine.pfe.model.EmploiDuTemps;
 import com.mohcine.pfe.services.EmploiDuTempsService;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class EmploiDuTempsServiceImpl implements EmploiDuTempsService {
         this.emploiDuTempsRepository = emploiDuTempsRepository;
     }
     @Override
-    public Emploidutemps creerEmploiDuTemps(Emploidutemps emploiDuTemps) {
+    public EmploiDuTemps creerEmploiDuTemps(EmploiDuTemps emploiDuTemps) {
         return emploiDuTempsRepository.save(emploiDuTemps);
     }
 }

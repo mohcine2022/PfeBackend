@@ -3,18 +3,22 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Emploidutemps {
+public class EmploiDuTemps {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private LocalDate dateDebut;
 	private LocalDate dateFin;
-	@OneToMany
-	private List<CreneauHoraire> creneauHoraires;
 
+	@OneToOne
+	private Formation formation;
+
+	@OneToMany
+	private Set<CreneauHoraire> creneauHoraires;
 }

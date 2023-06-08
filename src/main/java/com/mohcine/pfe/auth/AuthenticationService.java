@@ -23,8 +23,6 @@ public class AuthenticationService {
             throw new IllegalArgumentException("L'utilisateur avec cette adresse e-mail fournie existe déjà");
         }
         User user = User.builder()
-                .firstname(request.getFirstname())
-                .lastname(request.getLastname())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.USER)

@@ -11,7 +11,13 @@ public class Presence {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String statut;
-	@OneToMany
-	private List<Emargement> emargements;
+
+	@Enumerated(EnumType.STRING)
+	private StatutPresence statut = StatutPresence.PRESENT;
+
+	@ManyToOne
+	private CreneauHoraire creneauHoraire;
+
+	@ManyToOne
+	private Personne personne;
 }

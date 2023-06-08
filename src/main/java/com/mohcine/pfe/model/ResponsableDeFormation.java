@@ -1,19 +1,14 @@
 package com.mohcine.pfe.model;
-import jakarta.persistence.*;
-import lombok.*;
 
-import java.util.List;
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 @Entity
 public class ResponsableDeFormation extends Personne {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @OneToMany
-    private List<Cours> cours;
-    @OneToMany
-    private List<Emargement> emargements;
-
 }

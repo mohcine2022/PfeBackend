@@ -10,9 +10,8 @@ public class Conge {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private LocalDate debutConge;
-	private LocalDate finConge;
-	private int idConge;
+	private LocalDate dateDebut;
+	private LocalDate dateFin;
 	@ManyToOne
 	private Enseignant enseignant;
 	@ManyToOne

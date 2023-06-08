@@ -2,6 +2,7 @@ package com.mohcine.pfe.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -12,11 +13,10 @@ public class Inscription {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String dateInscription;
+	private LocalDate dateInscription;
+	private Double fraisInscription;
 	@ManyToOne
 	private Etudiant etudiant;
-	@OneToMany
-	private List<Cours> cours;
 	@ManyToOne
 	private Formation formation;
 }

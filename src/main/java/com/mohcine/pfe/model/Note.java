@@ -16,5 +16,4 @@ public class Note {
 	private Cours cours;
 	@ManyToOne
 	private Etudiant etudiant;
-
 }

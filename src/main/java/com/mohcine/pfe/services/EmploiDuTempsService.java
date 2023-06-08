@@ -1,7 +1,7 @@
 package com.mohcine.pfe.services;
 
-import com.mohcine.pfe.model.Emploidutemps;
+import com.mohcine.pfe.model.EmploiDuTemps;
 
 public interface EmploiDuTempsService {
-    Emploidutemps creerEmploiDuTemps(Emploidutemps emploiDuTemps);
+    EmploiDuTemps creerEmploiDuTemps(EmploiDuTemps emploiDuTemps);
 }

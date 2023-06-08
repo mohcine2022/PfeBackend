@@ -1,25 +1,31 @@
 package com.mohcine.pfe.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.Set;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class Formation {
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Double cout;
+    private String titre;
+    private String descriptions;
     private Date dateDebut;
     private Date dateFin;
     private int placesDisponibles;
-    private String titre;
+    @ManyToMany(fetch = FetchType.EAGER, targetEntity = Cours.class)
+    @JoinTable(
+            name = "formation_cours",
+            joinColumns = @JoinColumn(name = "formation_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "cours_id", referencedColumnName = "id")
+    )
+    private Set<Cours> cours;
 }

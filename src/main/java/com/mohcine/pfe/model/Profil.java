@@ -11,13 +11,14 @@ public class Profil {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	private String titre;
+	private String description;
+
 	private boolean suiviIntervenant;
 	private boolean voirCahierDeTexteInteractif;
 	private boolean voirConge;
 	private boolean voirCours;
 	private boolean voirEmargement;
-	private boolean voirEmploisdutemps;
+	private boolean voirEmploiDuTemps;
 	private boolean voirNotes;
-	private boolean voirTableauDeBord;
-
 }

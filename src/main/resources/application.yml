@@ -1,11 +1,11 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/jwt_security
+    url: jdbc:postgresql://localhost:5433/pfe_db
     username: postgres
-    password: Password
+    password: pgpassword
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-     ddl-auto: update
+      ddl-auto: update
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect

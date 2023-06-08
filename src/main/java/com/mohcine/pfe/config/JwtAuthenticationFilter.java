@@ -1,5 +1,6 @@
 package com.mohcine.pfe.config;
 
+import com.mohcine.pfe.services.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +23,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private final JwtService jwtService;
-    private final UserDetailsService userDetailsService;
+    private final UserService userDetailsService;
     @Override
     protected void doFilterInternal(
            @NonNull HttpServletRequest request,

@@ -13,11 +13,10 @@ public class CahierDeTexteInteractif {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private LocalDate dateCreation;
-	private String description;
 	private String titre;
+	private String description;
 	@ManyToOne
 	private Enseignant enseignant;
-
 }
 
 

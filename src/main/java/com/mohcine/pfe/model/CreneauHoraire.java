@@ -1,7 +1,11 @@
 package com.mohcine.pfe.model;
-import java.sql.Time;
+
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -10,14 +14,12 @@ public class CreneauHoraire {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private Time heureDebut;
-	private Time heureFin;
-	private String jour;
+	private LocalTime heureDebut;
+	private LocalTime heureFin;
+	@Enumerated(EnumType.STRING)
+	private Jours jour;
 	@ManyToOne
 	private Salle salle;
 	@ManyToOne
 	private Cours cours;
-	@ManyToOne
-	private Emploidutemps emploidutemps;
-
 }
