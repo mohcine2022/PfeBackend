@@ -27,7 +27,6 @@ public class FormationController {
         return this.formationService.creerFormation(formation);
     }
 
-
     @DeleteMapping("/formations/{id}")
     Boolean supprimerFormation(@RequestBody Long id) {
         return this.formationService.supprimerFormation(id);
