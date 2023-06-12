@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Data
@@ -18,8 +18,8 @@ public class Formation {
     private Long id;
     private String titre;
     private String descriptions;
-    private Date dateDebut;
-    private Date dateFin;
+    private LocalDate dateDebut;
+    private LocalDate dateFin;
     private int placesDisponibles;
     @ManyToMany(fetch = FetchType.EAGER, targetEntity = Cours.class)
     @JoinTable(

@@ -2,7 +2,6 @@ package com.mohcine.pfe.model;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Set;
 
 @Data
@@ -20,5 +19,5 @@ public class EmploiDuTemps {
 	private Formation formation;
 
 	@OneToMany
-	private Set<CreneauHoraire> creneauHoraires;
+	private Set<Seance> seances;
 }

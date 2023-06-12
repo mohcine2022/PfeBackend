@@ -18,6 +18,4 @@ public class Personne {
     private String email;
     private String numeroDeTelephone;
     private String adresse;
-    @OneToOne
-    private User user;
 }

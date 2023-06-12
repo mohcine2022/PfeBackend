@@ -1,4 +1,7 @@
 package com.mohcine.pfe.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -23,17 +26,32 @@ public class User implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Profil profil;
+    @OneToOne(fetch = FetchType.EAGER)
+    private Personne personne;
+
+    @Transient
+    @JsonProperty("nomDeProfil")
+    public String getNomDeProfil() {
+        return profil != null ? profil.getTitre(): "";
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
     }
     @Override
+    @JsonIgnore
     public String getPassword(){
         return password;
     }
+
+    @JsonSetter
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String getUsername() {
         return email;

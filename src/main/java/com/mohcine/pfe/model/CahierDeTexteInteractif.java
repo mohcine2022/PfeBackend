@@ -12,9 +12,11 @@ public class CahierDeTexteInteractif {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private LocalDate dateCreation;
-	private String titre;
 	private String description;
+	private String titre;
+	private LocalDate dateCreation = LocalDate.now();
+	@Enumerated(EnumType.STRING)
+	private TypeDeTexte typeDeTexte = TypeDeTexte.ANNONCE;
 	@ManyToOne
 	private Enseignant enseignant;
 }

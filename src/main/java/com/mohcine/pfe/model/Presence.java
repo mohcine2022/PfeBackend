@@ -2,7 +2,6 @@ package com.mohcine.pfe.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,7 +15,7 @@ public class Presence {
 	private StatutPresence statut = StatutPresence.PRESENT;
 
 	@ManyToOne
-	private CreneauHoraire creneauHoraire;
+	private Seance seance;
 
 	@ManyToOne
 	private Personne personne;
